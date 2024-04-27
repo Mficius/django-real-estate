@@ -6,7 +6,7 @@ from rest_framework import serializers
 
 User = get_user_model()
 
-class USerSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     phone_number = PhoneNumberField(source="profile.phone_number")
     profile_photo=serializers.ImageField(source="profile.profile_photo")
@@ -30,7 +30,7 @@ class USerSerializer(serializers.ModelSerializer):
         return obj.last_name.title()
 
     def to_representation(self, instance):
-        representation = super(USerSerializer, self).to_representation(instance)
+        representation = super(UserSerializer, self).to_representation(instance)
         if instance.is_superuser:
             representation["admin"] = True
         return representation

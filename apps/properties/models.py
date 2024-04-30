@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django_countries import CountryField
+from django_countries.fields import CountryField
 from apps.common.models import TimeStampedUUIDModel
 
 User = get_user_model()
@@ -72,7 +72,7 @@ class Property(TimeStampedUUIDModel):
 
     class Meta:
         verbose_name = _("Property")
-        verbose_name_plurial = _("Properties")   
+        verbose_name_plural = _("Properties")   
 
     def save(self, *args, **kwargs):
         self.title = str.title(self.title)

@@ -19,7 +19,7 @@ try:
         port="${PG_PORT}"
     )
 except psycopg2.OperationalError:
-    sys.exist(-1)
+    sys.exit(-1)
 sys.exit(0)
 END
 }

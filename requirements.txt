@@ -41,3 +41,6 @@ sqlparse==0.5.0
 tomli==2.0.1
 typing_extensions==4.11.0
 urllib3==2.2.1
+pytest-django==4.8.0
+pytest-factoryboy==2.7.0
+Facker==25.0.1 

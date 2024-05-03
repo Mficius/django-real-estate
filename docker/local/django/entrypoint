@@ -18,7 +18,7 @@ try:
         host="${PG_HOST}",
         port="${PG_PORT}"
     )
-execpt psycopg2.OperationalError:
+except psycopg2.OperationalError:
     sys.exist(-1)
 sys.exit(0)
 END

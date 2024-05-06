@@ -27,9 +27,9 @@ CSRF_TRUSTED_ORIGINS = ['http://locahost:8080']
 # Application definition
 
 DJANGO_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
     "django.contrib.contenttypes",
+    "django.contrib.admin",
+    "django.contrib.auth",    
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
@@ -44,7 +44,8 @@ THIRD_PARTY_APPS = [
     "django_countries",
     "phonenumber_field",
     "djoser",    
-    "rest_framework_simplejwt"
+    "rest_framework_simplejwt",
+    "djcelery_email",
 ]
 
 

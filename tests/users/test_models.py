@@ -5,7 +5,7 @@ def test_user_str(base_user):
     assert base_user.__str__() == f"{base_user.username}"
 
 def test_user_short_name(base_user):
-    """Test that the user models get_short_name method  works"""
+    """Test that the user models get_short_name method works"""
     short_name = f"{base_user.username}"
     assert base_user.get_short_name == short_name
 

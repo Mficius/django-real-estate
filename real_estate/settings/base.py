@@ -22,6 +22,7 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
+CSRF_TRUSTED_ORIGINS = ['http://locahost:8080']
 
 # Application definition
 

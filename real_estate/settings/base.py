@@ -22,7 +22,12 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
-CSRF_TRUSTED_ORIGINS = ['http://locahost:8080']
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+]
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8080']
+
 
 # Application definition
 
@@ -46,6 +51,7 @@ THIRD_PARTY_APPS = [
     "djoser",    
     "rest_framework_simplejwt",
     "djcelery_email",
+    #"corsheaders",
 ]
 
 
@@ -58,10 +64,13 @@ LOCAL_APPS = [
     "apps.enquiries",
 ]
 
+
+
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 
 MIDDLEWARE = [
+    #"corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -172,13 +181,12 @@ DJOSER = {
     "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
     "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
     "SEND_CONFIRMATION_EMAIL": True,
-    "PASSWORD_RESER_CONFIRM_URL": True,
     "PASSWORD_REST_CONFIRM_URL": "password/reset/confirm/{uid}/{token}",
     'SET_PASSWORD_RETYPE': True,
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
     'USERNAME_RESET_CONFIRM_URL': "email/reset/confirm/{uid}/{token}",
     'ACTIVATION_URL': 'activate/{uid}/{token}',
-    'SEND_ACTIVATE_EMAIL': True,
+    'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'apps.users.serializers.CreateUserSerializer',
         'user': 'apps.users.serializers.UserSerializer',

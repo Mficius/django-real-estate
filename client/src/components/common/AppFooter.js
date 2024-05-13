@@ -37,7 +37,7 @@ function AppFooter() {
             </div>
             <BackTop>
                 <div className='goTop'>
-                    <i className='fas fas-arrow-circle-up'></i>
+                    <i className='fas fa-arrow-circle-up'></i>
                 </div>
             </BackTop>
         </div>

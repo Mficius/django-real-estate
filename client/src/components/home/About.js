@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col,Row} from 'antd'
-import { Content } from 'antd/es/layout/layout'
 
 const items = [
     {
@@ -14,14 +13,14 @@ const items = [
         key:"2",
         icon: <i className='fas fa-database'></i>,
         title:"Lots of Properties",
-        Content:
+        content:
             "It is a long established fact that a reader will be distracted by the readable content.",
     },
     {
         key:"3",
         icon: <i className='fas fa-glore-africa'></i>,
         title:"Proudly African",
-        Content:
+        content:
             "It is a long established fact that a reader will be distracted by the readable content.",
     },
 

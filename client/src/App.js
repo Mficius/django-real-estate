@@ -1,7 +1,7 @@
 import React from "react"
 import { Layout} from 'antd'
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AppFooter from './components/common/AppFooter'
 import AppHeader from './components/common/AppHeader'
 import HomePage from './pages/HomePage'
@@ -17,7 +17,9 @@ function App() {
                 <AppHeader />
             </Header>
             <Content>
-              <Route  exact path="/" Component={HomePage} />
+              <Routes>
+                <Route  exact path="/" Component={HomePage} />
+              </Routes>
             </Content>
             <Footer>
               <AppFooter />

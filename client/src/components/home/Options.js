@@ -1,7 +1,6 @@
 import React from 'react'
-import {Button, Card, Descriptions, List} from 'antd'
-import { ChromeOutlined, HolderOutlined, TeamOutlined} from '@ant-design/icons';
-import { icons } from 'antd/es/image/PreviewGroup';
+import {Button, Card, List} from 'antd'
+import {HomeOutlined, ChromeOutlined, TeamOutlined} from '@ant-design/icons';
 
 const data = [
     {

@@ -1,7 +1,6 @@
 import React from 'react'
 import {SearchOutlined} from '@ant-design/icons'
 import { Button, Carousel } from 'antd';
-import { Content } from 'antd/es/layout/layout';
 
 const items = [
     {

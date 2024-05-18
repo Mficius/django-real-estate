@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AppFooter from './components/common/AppFooter'
 import AppHeader from './components/common/AppHeader'
 import HomePage from './pages/HomePage'
+import PropertyListPage from './pages/PropertyListPage'
 
 const {Content, Header, Footer} = Layout
 
@@ -18,7 +19,8 @@ function App() {
             </Header>
             <Content>
               <Routes>
-                <Route  exact path="/" Component={HomePage} />
+                <Route exact path="/" Component={HomePage} />
+                <Route exact path="/properties" Component={PropertyListPage}/>
               </Routes>
             </Content>
             <Footer>

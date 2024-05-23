@@ -3,11 +3,11 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import { useDispatch, useSelector} from 'react-redux'
-import { toast } from "react-toastify";
 import Spinner from '../components/Spinner';
 import {toast} from 'react-toastify';
 import Property from '../components/Property';
 import { getProperties } from '../features/properties/propertySlice'
+import Title from '../components/Title';
 
 const PropertiesPage = () => {
   const {properties, isLoading, isError, message } = useSelector(
@@ -30,6 +30,7 @@ const PropertiesPage = () => {
 
   return (
     <>
+      <Title title="Our Properties Catalog"/>
         <Container>
             <Row>
                 <Col className='mg-top text-center'>

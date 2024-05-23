@@ -3,10 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 import { LinkContainer } from 'react-router-bootstrap';
+import Title from '../components/Title';
 
 function HomePage() {
   return (
     <>
+        <Title />
         <header className='masthead main-bg-image'>
             <Container className='px-4 px-lg-5 d-flex h-100 align-items-center 
                 justify-content-center'>

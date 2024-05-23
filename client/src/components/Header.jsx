@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const Header = () => {
   return (
-    <Header>
+    <header>
         <Navbar 
             fixed="top" 
             bg="bard" 
@@ -41,8 +41,10 @@ const Header = () => {
                 </Nav>
                 </Navbar.Collapse>
             </Container>
+
+            
         </Navbar>
-    </Header>
+    </header>
   )
 }
 
